@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Krylsam Advertising</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --gold: #d9a928;
+    --gold-light: #f4d477;
+    --blue: #073b78;
+    --blue-dark: #031b38;
+    --red: #c51f32;
+    --white: #ffffff;
+    --cream: #fffaf0;
+    --ink: #172033;
+    --muted: #667085;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 3px solid var(--gold);
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--blue);
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.logo-mark {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    display: grid;
+    place-items: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue) 0 55%,
+            var(--red) 55%
+        );
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--ink);
+}
+
+nav a:hover {
+    color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 610px;
+
+    display: grid;
+    place-items: center;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #d9a92830,
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            #c51f3230,
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #031b38 0%,
+            #073b78 55%,
+            #0a5592 100%
+        );
+
+    color: white;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+    padding: 80px 22px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border: 1px solid #f4d47788;
+    border-radius: 99px;
+
+    background: #ffffff12;
+
+    color: var(--gold-light);
+
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    line-height: 1.02;
+
+    margin: 20px 0 18px;
+
+    font-weight: 800;
+}
+
+h1 em {
+    font-style: normal;
+    color: var(--gold-light);
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+
+    color: #e8eef8;
+
+    font-size: 1.05rem;
+}
+
+.actions {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    display: inline-block;
+
+    border: 2px solid transparent;
+
+    text-decoration: none;
+
+    transition: .2s;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: #18200e;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background: var(--gold-light);
+}
+
+.btn-white {
+    background: white;
+    color: var(--blue);
+}
+
+.btn-white:hover {
+    transform: translateY(-2px);
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 78px 22px;
+}
+
+.section-head {
+    text-align: center;
+
+    margin-bottom: 32px;
+}
+
+.section-head h2 {
+    font-size: 2rem;
+    color: var(--blue);
+}
+
+.section-head h2:after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 4px;
+
+    background: var(--red);
+
+    margin: 10px auto;
+
+    border-radius: 5px;
+}
+
+.section-head p {
+    color: var(--muted);
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+/* SEARCH */
+
+.search-wrap {
+    max-width: 650px;
+
+    margin: 0 auto 38px;
+
+    position: relative;
+}
+
+.search {
+    width: 100%;
+
+    padding: 17px 22px 17px 50px;
+
+    border: 2px solid #e3e7ee;
+
+    border-radius: 14px;
+
+    background: white;
+
+    font: inherit;
+
+    outline: none;
+
+    box-shadow: 0 8px 25px #1a2d4810;
+}
+
+.search:focus {
+    border-color: var(--gold);
+}
+
+.search-icon {
+    position: absolute;
+
+    left: 18px;
+    top: 15px;
+
+    font-size: 1.3rem;
+}
+
+/* SERVICES */
+
+.services {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.card {
+    background: white;
+
+    border: 1px solid #e9edf2;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 28px #1c2a3a12;
+
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 18px 35px #1c2a3a20;
+}
+
+.card-image {
+    height: 205px;
+
+    overflow: hidden;
+
+    background: #eaf0f8;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: .35s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 21px;
+}
+
+.card h3 {
+    color: var(--blue);
+
+    margin-bottom: 7px;
+}
+
+.card p {
+    font-size: .9rem;
+
+    color: var(--muted);
+
+    margin-bottom: 15px;
+}
+
+.tag {
+    font-size: .72rem;
+
+    font-weight: 800;
+
+    color: var(--red);
+
+    text-transform: uppercase;
+
+    letter-spacing: .7px;
+}
+
+.no-results {
+    text-align: center;
+
+    color: var(--muted);
+
+    display: none;
+
+    padding: 30px;
+}
+
+/* ABOUT */
+
+.about {
+    background:
+        linear-gradient(
+            135deg,
+            #fff 0%,
+            #fff7df 100%
+        );
+
+    border-top: 1px solid #f1dfaa;
+
+    border-bottom: 1px solid #f1dfaa;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+
+    align-items: center;
+}
+
+.about h2 {
+    font-size: 2.1rem;
+
+    color: var(--blue);
+
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: var(--muted);
+
+    margin-bottom: 18px;
+}
+
+.features {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.feature {
+    background: white;
+
+    border-left: 4px solid var(--red);
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--blue-dark);
+
+    color: white;
+
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.1rem;
+
+    color: white;
+}
+
+.contact p {
+    color: #ccd7e6;
+
+    margin: 10px auto 22px;
+
+    max-width: 620px;
+}
+
+.contact-info {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.contact-chip {
+    background: #ffffff10;
+
+    border: 1px solid #ffffff22;
+
+    padding: 12px 17px;
+
+    border-radius: 10px;
+}
+
+.contact-chip a {
+    color: white;
+
+    text-decoration: none;
+}
+
+.contact-chip a:hover {
+    color: var(--gold-light);
+}
+
+/* FOOTER */
+
+footer {
+    background: #021329;
+
+    color: #9eacc0;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    font-size: .82rem;
+}
+
+footer strong {
+    color: white;
+}
+
+/* MOBILE */
+
+@media(max-width:850px) {
+
+    .services {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+@media(max-width:560px) {
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 570px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+<div class="nav">
+
+<a class="logo" href="#home">
+
+<div class="logo-mark">
+K
+</div>
+
+<div>
+Krylsam <span>Advertising</span>
+</div>
+
+</a>
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#services">Services</a>
+
+<a href="#about">About</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<span class="badge">
+CREATIVE • QUALITY • PROFESSIONAL
+</span>
+
+<h1>
+Make Your Brand
+<em>Stand Out.</em>
+</h1>
+
+<p>
+Professional advertising and printing solutions for
+businesses, events, stores, and organizations.
+</p>
+
+<div class="actions">
+
+<a class="btn btn-primary" href="#services">
+Explore Services
+</a>
+
+<a class="btn btn-white" href="#contact">
+Get a Quote
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="section" id="services">
+
+<div class="section-head">
+
+<h2>
+Our Services
+</h2>
+
+<p>
+From eye-catching signs to custom prints,
+we help turn your ideas into visible branding.
+</p>
+
+</div>
+
+
+<!-- SEARCH BAR -->
+
+<div class="search-wrap">
+
+<span class="search-icon">
+⌕
+</span>
+
+<input
+id="search"
+class="search"
+type="search"
+placeholder="Search services... e.g. tarpaulin, stickers, acrylic"
+>
+
+</div>
+
+
+<div class="services" id="serviceGrid">
+
+
+<!-- TARPAULIN -->
+
+<article
+class="card"
+data-name="tarpaulin banner printing"
+>
+
+<div class="card-image">
+
+<img
+src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=80"
+alt="Creative advertising design"
+>
+
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+Printing
+</span>
+
+<h3>
+Tarpaulin Printing
+</h3>
+
+<p>
+Bold, high-quality banners for promotions,
+events, stores, and celebrations.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- SIGNAGE -->
+
+<article
+class="card"
+data-name="signage sign signs business"
+>
+
+<div class="card-image">
+
+<img
+src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80"
+alt="Business signage"
+>
+
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+Branding
+</span>
+
+<h3>
+Signage
+</h3>
+
+<p>
+Professional signs that make your business
+easy to find and remember.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- BILLBOARD -->
+
+<article
+class="card"
+data-name="billboard outdoor advertising"
+>
+
+<div class="card-image">
+
+<img
+src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80"
+alt="Outdoor advertising"
+>
+
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+Outdoor
+</span>
+
+<h3>
+Billboard Advertising
+</h3>
+
+<p>
+Large-format advertising designed to get
+attention from a distance.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- SINTRA -->
+
+<article
+class="card"
+data-name="sintra board pvc display"
+>
+
+<div class="card-image">
+
+<img
+src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+alt="Business display materials"
+>
+
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+Displays
+</span>
+
+<h3>
+Sintra Boards
+</h3>
+
+<p>
+Lightweight, clean, and versatile boards
+for displays and promotional use.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- ACRYLIC -->
+
+<article
+class="card"
+data-name="acrylic build up letters logo signage"
+>
+
+<div class="card-image">
+
+<img
+src="https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=900&q=80"
+alt="Acrylic branding display"
+>
+
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+Premium
+</span>
+
+<h3>
+Acrylic Build-Up
+</h3>
+
+<p>
+Elegant raised lettering and logos for
+a polished professional look.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- STICKERS -->
+
+<article
+class="card"
+data-name="stickers labels custom sticker"
+>
+
+<div class="card-image">
+
+<img
+src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=900&q=80"
+alt="Custom stickers"
+>
+
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+Custom Print
+</span>
+
+<h3>
+Stickers & Labels
+</h3>
+
+<p>
+Custom stickers for products, packaging,
+promotions, and personal projects.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- UV PRINTING -->
+
+<article
+class="card"
+data-name="uv printing custom uv print"
+>
+
+<div class="card-image">
+
+<img
+src="https://images.unsplash.com/photo-1561070791-36c11767b26a?auto=format&fit=crop&w=900&q=80"
+alt="Graphic printing"
+>
+
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+Specialty
+</span>
+
+<h3>
+UV Printing
+</h3>
+
+<p>
+Sharp, vibrant custom prints for selected
+materials and promotional products.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- CUSTOM ADVERTISING -->
+
+<article
+class="card"
+data-name="custom advertising design"
+>
+
+<div class="card-image">
+
+<img
+src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=80"
+alt="Graphic design and advertising"
+>
+
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+Design
+</span>
+
+<h3>
+Custom Advertising
+</h3>
+
+<p>
+Creative visual materials tailored to your
+brand, campaign, or event.
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+<div class="no-results" id="noResults">
+No services found. Try another keyword.
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="section about-grid">
+
+<div>
+
+<span class="tag">
+WHY KRYLSAM?
+</span>
+
+<h2>
+Advertising made to be noticed.
+</h2>
+
+<p>
+We create practical and attractive advertising
+materials that help businesses present their
+brand with confidence.
+</p>
+
+<p>
+Choose the service you need, tell us what you
+have in mind, and let's turn it into something
+people can see.
+</p>
+
+</div>
+
+
+<div class="features">
+
+<div class="feature">
+✦ Quality-focused work
+</div>
+
+<div class="feature">
+✦ Custom designs
+</div>
+
+<div class="feature">
+✦ Business-friendly solutions
+</div>
+
+<div class="feature">
+✦ Professional presentation
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="section">
+
+<h2>
+Ready to advertise?
+</h2>
+
+<p>
+Send us your project details and we'll help you
+choose the right advertising solution.
+</p>
+
+
+<div class="contact-info">
+
+
+<!-- PHONE -->
+
+<div class="contact-chip">
+
+📱
+
+<a href="tel:09615892420">
+0961 589 2420
+</a>
+
+</div>
+
+
+<!-- EMAIL -->
+
+<div class="contact-chip">
+
+✉️
+
+<a href="mailto:krylsamadvertisinginc1@gmail.com">
+
+krylsamadvertisinginc1@gmail.com
+
+</a>
+
+</div>
+
+
+<!-- FACEBOOK -->
+
+<div class="contact-chip">
+
+📘
+
+Krylsam Advertising
+
+</div>
+
+
+</div>
+
+
+<div class="actions">
+
+<a
+class="btn btn-primary"
+href="mailto:krylsamadvertisinginc1@gmail.com?subject=Advertising%20Inquiry"
+>
+
+Request a Quote
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026
+
+<strong>
+Krylsam Advertising
+</strong>
+
+· Creative Advertising & Printing Solutions
+
+</footer>
+
+
+<!-- SEARCH FUNCTION -->
+
+<script>
+
+const search =
+document.getElementById("search");
+
+const cards =
+[...document.querySelectorAll(".card")];
+
+const noResults =
+document.getElementById("noResults");
+
+
+search.addEventListener("input", () => {
+
+const query =
+search.value.toLowerCase().trim();
+
+let visible = 0;
+
+
+cards.forEach(card => {
+
+const matches =
+card.dataset.name.includes(query) ||
+card.innerText.toLowerCase().includes(query);
+
+
+card.style.display =
+matches ? "" : "none";
+
+
+if (matches) {
+visible++;
+}
+
+});
+
+
+noResults.style.display =
+visible ? "none" : "block";
+
+});
+
+</script>
+
+</body>
+</html>
